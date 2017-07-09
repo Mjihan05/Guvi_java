@@ -1,0 +1,28 @@
+import java.util.Scanner;  
+public class MyClass {
+    public static int ans=1;
+    public static void main(String args[]) {
+      
+        Scanner sc = new Scanner(System.in);
+        int x=sc.nextInt();
+        int y=sc.nextInt();
+        
+        System.out.println(pow(x,y));
+        
+    }
+    
+    public static int pow(int base , int power)
+        {
+            
+            if(power==0)
+            {
+                return ans;
+            }
+            else
+            {
+                ans*=base;
+                power--;
+                return pow(base,power);
+            }
+        }
+}

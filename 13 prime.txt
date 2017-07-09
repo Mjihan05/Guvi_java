@@ -1,0 +1,32 @@
+import java.util.Scanner;  
+public class MyClass {
+    
+    public static void main(String args[]) {
+      
+        Scanner sc = new Scanner(System.in);
+        int x=sc.nextInt();
+        
+        if(prime(x))
+        {
+            System.out.println(x+" is Prime");
+        }
+        else
+        {
+            System.out.println(x+" is not Prime");
+        }
+        
+        
+    }
+    
+    public static boolean prime(int number)
+        {
+            for(int i=2; i<number; i++)
+            {
+                if(number%i==0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+}
