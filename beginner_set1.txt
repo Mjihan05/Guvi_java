@@ -1,0 +1,339 @@
+Question 1
+
+import java.util.Scanner;  
+
+public class MyClass {
+    public static void main(String args[]) {
+    
+    Scanner sc = new Scanner(System.in);
+    int x= sc.nextInt();
+    
+    if(x>=1)
+    {
+        System.out.println("Positive");
+    }
+    else if (x<0)
+    {
+        System.out.println("Negative");
+    }
+    else
+    {
+        System.out.println("Zero");
+    }
+    
+
+    }
+}
+
+
+Question 2
+
+import java.util.Scanner;  
+
+public class MyClass {
+    public static void main(String args[]) {
+    
+    Scanner sc = new Scanner(System.in);
+    int x= sc.nextInt();
+    
+    if(x%2==0)
+    {
+        System.out.println("Even");
+    }
+    else
+    {
+        System.out.println("Odd");
+    }
+    
+    }
+}
+
+
+Question 3
+
+import java.util.Scanner;  
+
+public class MyClass {
+    public static void main(String args[]) {
+    
+    Scanner sc = new Scanner(System.in);
+    char c = sc.next().charAt(0);
+    
+    switch(c)
+    {
+        case 'a' :
+        case 'e':
+        case 'i' :
+        case 'o':
+        case 'u':
+        case 'A':
+        case 'E':
+        case 'I':
+        case 'O':
+        case 'U':
+        System.out.println("Vowel");
+        break;
+        default :
+        System.out.println("consonant");
+        break;
+    }
+    
+    }
+}
+
+Question 4
+
+import java.util.Scanner;  
+
+public class MyClass {
+    public static void main(String args[]) {
+    
+    Scanner sc = new Scanner(System.in);
+    char c = sc.next().charAt(0);
+    
+    if(c>='A'&&c<='Z')
+    {
+        System.out.println("Alphabet");
+    }
+    else if(c>='a'&&c<='z')
+    {
+        System.out.println("Alphabet");
+    }
+    else{
+        System.out.println("Not an Alphabet");
+    }
+    }
+}
+
+Question 5
+
+import java.util.Scanner;  
+
+public class MyClass {
+    public static void main(String args[]) {
+    
+    Scanner sc = new Scanner(System.in);
+    int x= sc.nextInt();
+    int y= sc.nextInt();
+    int z= sc.nextInt();
+    
+    if(x>y && x>z)
+    {
+        System.out.println(x + " is largest");
+    }
+    else if(y>z && y>x)
+    {
+        System.out.println(y + " is largest");
+    }
+    else if(z>x && z>y)
+    {
+        System.out.println(z + " is largest");
+    }
+    else
+    {
+        System.out.println("there are equal numbers ");
+    }
+   
+    } 
+    
+}
+
+Question 6
+
+import java.util.Scanner;  
+public class MyClass {
+    public static void main(String args[]) {
+      
+        Scanner sc = new Scanner(System.in);
+        int x= sc.nextInt();
+        
+        if((x%400==0) || (x%4==0&&x%100!=0))
+        {
+            System.out.println("Leap Year");
+        }
+        else
+        {
+            System.out.println("Not Leap Year");
+        }
+        
+    }
+}
+
+
+Question 7
+
+import java.util.Scanner;  
+public class MyClass {
+    public static void main(String args[]) {
+      
+        for (int i=0; i<5; i++)
+        {
+            System.out.println("Hello");
+        }
+        
+    }
+}
+
+
+Question 8
+
+import java.util.Scanner;  
+public class MyClass {
+    public static void main(String args[]) {
+      
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Entetr Range");
+        int x= sc.nextInt();
+        int sum=0;
+        
+        for (int i=1;i<=x; i++)
+        {
+            sum+=i;
+        }
+        System.out.println(sum);
+        
+    }
+}
+
+
+Question 9
+
+import java.util.Scanner;  
+public class MyClass {
+    public static void main(String args[]) {
+      
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Range");
+        int x= sc.nextInt();
+        int sum=0;
+        
+        for (int i=1;i<=x; i++)
+        {
+            int y= sc.nextInt();
+            sum+=y;
+        }
+        System.out.println(sum);
+        
+    }
+}
+
+
+Question 10
+
+import java.util.Scanner;  
+public class MyClass {
+    public static void main(String args[]) {
+      
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number");
+        int count=0;
+        int x=sc.nextInt();
+        
+        if(x==0){System.out.println("Number of digits are 1");}
+        else
+        {
+        while(x!=0)
+        {
+            count++;
+            x=x/10;
+        }
+        
+        System.out.println("Number of digits are " +count);
+        }
+    }
+}
+
+
+Question 11
+
+import java.util.Scanner;  
+public class MyClass {
+    public static int ans=1;
+    public static void main(String args[]) {
+      
+        Scanner sc = new Scanner(System.in);
+        int x=sc.nextInt();
+        int y=sc.nextInt();
+        
+        System.out.println(pow(x,y));
+        
+    }
+    
+    public static int pow(int base , int power)
+        {
+            
+            if(power==0)
+            {
+                return ans;
+            }
+            else
+            {
+                ans*=base;
+                power--;
+                return pow(base,power);
+            }
+        }
+}
+
+
+Question 12
+
+import java.util.Scanner;  
+public class MyClass {
+    public static void main(String args[]) {
+      
+        Scanner sc = new Scanner(System.in);
+        String x=sc.nextLine();
+        String y="";
+        
+        for(int i=x.length()-1; i>=0;i--)
+        {
+         y+=(x.charAt(i));
+        }
+        
+        if(x.equals(y))
+        {
+        System.out.print("yupp");
+        }
+        else
+        {
+            System.out.print("nope");
+        }
+    }
+}
+
+
+Question 13
+
+import java.util.Scanner;  
+public class MyClass {
+    
+    public static void main(String args[]) {
+      
+        Scanner sc = new Scanner(System.in);
+        int x=sc.nextInt();
+        
+        if(prime(x))
+        {
+            System.out.println(x+" is Prime");
+        }
+        else
+        {
+            System.out.println(x+" is not Prime");
+        }
+        
+        
+    }
+    
+    public static boolean prime(int number)
+        {
+            for(int i=2; i<number; i++)
+            {
+                if(number%i==0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+}
